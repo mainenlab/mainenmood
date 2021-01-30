@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ColorRect",
+"class": "MathPlot",
+"language": "GDScript",
+"path": "res://addon/MathPlot.gd"
+}, {
+"base": "Path2D",
+"class": "SmoothPath",
+"language": "GDScript",
+"path": "res://addon/SmoothPath.gd"
+} ]
+_global_script_class_icons={
+"MathPlot": "",
+"SmoothPath": ""
+}
+
+[application]
+
+config/name="mainenmood"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://global.gd"
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/handheld/orientation="portrait"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
