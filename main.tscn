@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://plot.gd" type="Script" id=1]
 [ext_resource path="res://addon/MathPlot.gd" type="Script" id=2]
 [ext_resource path="res://data_send.gd" type="Script" id=3]
 [ext_resource path="res://Roboto-Medium.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://df.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -62,10 +66,11 @@ __meta__ = {
 }
 
 [node name="mood_slider" type="RichTextLabel" parent="Control/today"]
-margin_left = 82.1225
-margin_top = -25.1225
-margin_right = 265.122
-margin_bottom = -1.12247
+margin_left = 82.0
+margin_top = -30.0
+margin_right = 265.0
+margin_bottom = -1.0
+custom_fonts/normal_font = SubResource( 2 )
 text = "How do you feel today?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,10 +102,11 @@ __meta__ = {
 }
 
 [node name="mood_variance" type="RichTextLabel" parent="Control/week"]
-margin_left = 48.5
-margin_top = -28.0
-margin_right = 346.5
+margin_left = 49.0
+margin_top = -38.0
+margin_right = 347.0
 margin_bottom = -4.0
+custom_fonts/normal_font = SubResource( 2 )
 text = "How did you feel for the past week?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -133,9 +139,10 @@ __meta__ = {
 
 [node name="mood_variance" type="RichTextLabel" parent="Control/future"]
 margin_left = 25.0
-margin_top = -33.0
+margin_top = -48.0
 margin_right = 376.0
-margin_bottom = -2.0
+margin_bottom = -1.0
+custom_fonts/normal_font = SubResource( 2 )
 text = "How do you think you will feel next week?
 "
 __meta__ = {
