@@ -1,18 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://plot.gd" type="Script" id=1]
 [ext_resource path="res://addon/MathPlot.gd" type="Script" id=2]
 [ext_resource path="res://data_send.gd" type="Script" id=3]
+[ext_resource path="res://Roboto-Medium.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://df.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 150.587
-margin_top = 58.218
-margin_right = 242.587
-margin_bottom = 81.218
-rect_scale = Vector2( 5, 5 )
+margin_left = 189.681
+margin_top = 64.7272
+margin_right = 542.681
+margin_bottom = 135.727
+custom_fonts/font = ExtResource( 5 )
 text = "MainenMood"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -28,6 +34,7 @@ __meta__ = {
 }
 
 [node name="MathPlot" type="ColorRect" parent="Control"]
+visible = false
 margin_left = 1017.7
 margin_top = 268.452
 margin_right = 1419.7
@@ -65,10 +72,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/today"]
-margin_left = -61.3579
-margin_top = 1.13327
-margin_right = 374.642
-margin_bottom = 15.1333
+margin_left = -52.3579
+margin_top = -1.86676
+margin_right = 1619.64
+margin_bottom = 69.1332
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
 text = "Terrible                                                                                        Great"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -98,10 +107,12 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="Control/week"]
-margin_left = -63.3579
-margin_top = 0.133331
-margin_right = 372.642
-margin_bottom = 14.1333
+margin_left = -54.3579
+margin_top = -2.8667
+margin_right = 1617.64
+margin_bottom = 68.1333
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
 text = "Terrible                                                                                        Great"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -132,21 +143,23 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="Control/future"]
-margin_left = -62.4292
-margin_top = 1.27835
-margin_right = 373.571
-margin_bottom = 15.2784
+margin_left = -53.4292
+margin_top = -1.72168
+margin_right = 1618.57
+margin_bottom = 69.2783
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = ExtResource( 5 )
 text = "Terrible                                                                                        Great"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="Control"]
-margin_left = 415.104
-margin_top = 613.563
-margin_right = 531.104
-margin_bottom = 648.563
-rect_scale = Vector2( 2, 2 )
+margin_left = 476.104
+margin_top = 614.563
+margin_right = 592.104
+margin_bottom = 652.563
+custom_fonts/font = SubResource( 1 )
 text = "SUBMIT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -160,11 +173,12 @@ position = Vector2( 180.571, 791.894 )
 scale = Vector2( 4, 4 )
 
 [node name="Label" type="Label" parent="ht1"]
-margin_left = -12.9892
-margin_top = 1.96999
-margin_right = 483.011
-margin_bottom = 15.97
-rect_scale = Vector2( 0.25, 0.25 )
+margin_left = -17.7392
+margin_top = 0.719971
+margin_right = 1879.26
+margin_bottom = 71.72
+rect_scale = Vector2( 0.07, 0.07 )
+custom_fonts/font = ExtResource( 5 )
 text = "Terrible                                                                                                       Great"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -172,43 +186,43 @@ __meta__ = {
 
 [node name="h1" type="Polygon2D" parent="ht1"]
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h2" type="Polygon2D" parent="ht1"]
 position = Vector2( 14, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h3" type="Polygon2D" parent="ht1"]
 position = Vector2( 30, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h4" type="Polygon2D" parent="ht1"]
 position = Vector2( 46, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h5" type="Polygon2D" parent="ht1"]
 position = Vector2( 61, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h6" type="Polygon2D" parent="ht1"]
 position = Vector2( 76, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="h7" type="Polygon2D" parent="ht1"]
 position = Vector2( 91, 0 )
 scale = Vector2( 1, 0.5 )
-color = Color( 0.00392157, 0.329412, 0.403922, 1 )
+color = Color( 0.901961, 0.913725, 0.72549, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 10, 10, 10, 10, 0 )
 
 [node name="v1" type="Label" parent="ht1"]

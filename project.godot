@@ -45,4 +45,5 @@ window/handheld/orientation="portrait"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.0156863, 0.419608, 0.341176, 1 )
 environment/default_environment="res://default_env.tres"
