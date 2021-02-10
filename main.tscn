@@ -6,11 +6,11 @@
 [ext_resource path="res://Roboto-Medium.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://df.tres" type="DynamicFont" id=5]
 
-[sub_resource type="DynamicFont" id=2]
-size = 17
+[sub_resource type="DynamicFont" id=1]
+size = 26
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 26
 font_data = ExtResource( 4 )
 
@@ -66,11 +66,11 @@ __meta__ = {
 }
 
 [node name="mood_slider" type="RichTextLabel" parent="Control/today"]
-margin_left = 82.0
-margin_top = -30.0
-margin_right = 265.0
-margin_bottom = -1.0
-custom_fonts/normal_font = SubResource( 2 )
+margin_left = 26.0
+margin_top = -42.0
+margin_right = 335.0
+margin_bottom = -8.0
+custom_fonts/normal_font = SubResource( 1 )
 text = "How do you feel today?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -102,11 +102,11 @@ __meta__ = {
 }
 
 [node name="mood_variance" type="RichTextLabel" parent="Control/week"]
-margin_left = 49.0
-margin_top = -38.0
-margin_right = 347.0
-margin_bottom = -4.0
-custom_fonts/normal_font = SubResource( 2 )
+margin_left = -51.4543
+margin_top = -45.0397
+margin_right = 386.546
+margin_bottom = -6.03967
+custom_fonts/normal_font = SubResource( 1 )
 text = "How did you feel for the past week?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -138,13 +138,12 @@ __meta__ = {
 }
 
 [node name="mood_variance" type="RichTextLabel" parent="Control/future"]
-margin_left = 25.0
-margin_top = -48.0
-margin_right = 376.0
-margin_bottom = -1.0
-custom_fonts/normal_font = SubResource( 2 )
-text = "How do you think you will feel next week?
-"
+margin_left = -82.1766
+margin_top = -48.4802
+margin_right = 412.823
+margin_bottom = -10.4802
+custom_fonts/normal_font = SubResource( 1 )
+text = "How do you think you will feel next week?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -166,8 +165,19 @@ margin_left = 476.104
 margin_top = 614.563
 margin_right = 592.104
 margin_bottom = 652.563
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "SUBMIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="get_dt" type="Button" parent="Control"]
+margin_left = 440.624
+margin_top = 614.329
+margin_right = 633.624
+margin_bottom = 652.329
+custom_fonts/font = SubResource( 2 )
+text = "REFRESH PLOT"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -439,4 +449,5 @@ __meta__ = {
 [connection signal="value_changed" from="Control/week" to="." method="_on_week_value_changed"]
 [connection signal="value_changed" from="Control/future" to="." method="_on_future_value_changed"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/get_dt" to="." method="_on_get_dt_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

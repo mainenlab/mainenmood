@@ -14,6 +14,7 @@ func _ready():
 	we = 3
 	tm = 3
 	update_values()
+	$Control/get_dt.set_visible(0)
 
 
 func update_values():
@@ -38,7 +39,14 @@ func _on_Button_pressed():
 	$HTTPRequest.send_data()
 	
 	$Control/Button.set_visible(0)
+	$Control/get_dt.set_visible(1)
 	
+
+
+
+func _on_get_dt_pressed():
+	$HTTPRequest.get_data()
+
 
 
 
@@ -52,9 +60,11 @@ func _on_HTTPRequest_request_completed(_result, _response_code, _headers, body):
 			
 	else:
 		global.dl = body.get_string_from_utf8()
-
 		var js = parse_json(global.dl)
-
+		today = Array()
+		week = Array()
+		future = Array()
+		#print(js)
 		for i in range(0,len(js)):
 			#get today
 			if int(js[i]["TIMESTAMP"].substr(8,2)) == OS.get_date()["day"] && int(js[i]["TIMESTAMP"].substr(5,2)) == OS.get_date()["month"] && int(js[i]["TIMESTAMP"].substr(0,4)) == OS.get_date()["year"]: #get day
@@ -73,7 +83,7 @@ func draw_hist(dt,id):
 	print(dt.count(float(3)))
 	for i in range(0,7):
 		hist_dt.append(dt.count(float(i)))
-		print(i+1)
+		#print(i+1)
 		get_node(str('ht',id,'/h',i+1)).scale = Vector2(1,-(0.25*hist_dt[i]))
 		get_node(str('ht',id,'/v',i+1)).text = str(hist_dt[i])
 		
@@ -100,3 +110,4 @@ func draw_hist(dt,id):
 #		update_values()
 #		$Control/MathPlot.createScatterPlot(today)
 #		$Control/MathPlot.update()
+
